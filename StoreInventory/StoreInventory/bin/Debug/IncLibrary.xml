@@ -1,0 +1,919 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IncLibrary
+</name>
+</assembly>
+<members>
+<member name="F:IncLibrary.GoogleChartSharp.AxisAlignmentType.Left">
+	<summary>
+ Left align label
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.AxisAlignmentType.Centered">
+	<summary>
+ Center align label
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.AxisAlignmentType.Right">
+	<summary>
+ Right align label
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.AxisAlignmentType.Unset">
+	<summary>
+ Use default alignment
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.AxisAlignmentType">
+	<summary>
+ Axis label alignment. By default: x-axis labels are centered, left y-axis 
+ labels are right aligned, right y-axis labels are left aligned
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ChartAxis.Color">
+	<summary>
+ an RRGGBB format hexadecimal number
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ChartAxis.FontSize">
+	<summary>
+ optional if used this specifies the size in pixels
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ChartAxis.Alignment">
+	<summary>
+ By default: x-axis labels are centered, left y-axis labels are right aligned, right y-axis labels are left aligned
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxis.#ctor(IncLibrary.GoogleChartSharp.ChartAxisType)">
+	<summary>
+ Create an axis, default is range 0 - 100 evenly spaced. You can create multiple axes of the same ChartAxisType.
+ </summary>
+	<param name="axisType">Axis position</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxis.#ctor(IncLibrary.GoogleChartSharp.ChartAxisType,System.String[])">
+	<summary>
+ Create an axis, default is range 0 - 100 evenly spaced. You can create multiple axes of the same ChartAxisType.
+ </summary>
+	<param name="axisType">Axis position</param>
+	<param name="labels">These labels will be added to the axis without position information</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxis.SetRange(System.Int32,System.Int32)">
+	<summary>
+ Specify the axis range
+ </summary>
+	<param name="lowerBound">the lowest value on the axis</param>
+	<param name="upperBound">the highest value on the axis</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxis.AddLabel(IncLibrary.GoogleChartSharp.ChartAxisLabel)">
+	<summary>
+ Add a label to the axis
+ </summary>
+	<param name="axisLabel"></param>
+</member><member name="T:IncLibrary.GoogleChartSharp.ChartAxis">
+	<summary>
+ Chart Axis
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartAxisLabel.Text">
+	<summary>
+ This text will be displayed on the axis
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartAxisLabel.Position">
+	<summary>
+ A value within the axis range
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxisLabel.#ctor(System.String)">
+	<summary>
+ Create an axis label without position information, labels will be evenly spaced on the axis
+ </summary>
+	<param name="text">The label text</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxisLabel.#ctor(System.Single)">
+	<summary>
+ Create an axis label without label text. The axis label will be evenly spaced on the axis and the text will
+ be it's numeric position within the axis range.
+ </summary>
+	<param name="position"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.ChartAxisLabel.#ctor(System.String,System.Single)">
+	<summary>
+ Create an axis label with label text and position.
+ </summary>
+	<param name="text">The label text</param>
+	<param name="position">The label position within the axis range</param>
+</member><member name="T:IncLibrary.GoogleChartSharp.ChartAxisLabel">
+	<summary>
+ Describes an axis label
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartAxisType.Bottom">
+	<summary>
+ Bottom x-axis
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartAxisType.Top">
+	<summary>
+ Top x-axis
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartAxisType.Left">
+	<summary>
+ Left y-axis
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartAxisType.Right">
+	<summary>
+ Right y-axis
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.ChartAxisType">
+	<summary>
+ Chart axis locations
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.FillArea.Color">
+	<summary>
+ an RRGGBB format hexadecimal number
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.FillArea.StartLineIndex">
+	<summary>
+ the index of the line at which the fill starts. This is determined by the order in which data sets are added. The first data set specified has an index of zero (0), the second 1, and so on.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.FillArea.EndLineIndex">
+	<summary>
+ the index of the line at which the fill ends. This is determined by the order in which data sets are added. The first data set specified has an index of zero (0), the second 1, and so on.
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.FillArea.#ctor(System.String,System.Int32,System.Int32)">
+	<summary>
+ Create a fill area between lines for use on a line chart.
+ </summary>
+	<param name="color">an RRGGBB format hexadecimal number</param>
+	<param name="startLineIndex">line indexes are determined by the order in which datasets are added. The first set is index 0, then index 1 etc</param>
+	<param name="endLineIndex">line indexes are determined by the order in which datasets are added. The first set is index 0, then index 1 etc</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.FillArea.#ctor(System.String,System.Int32)">
+	<summary>
+ Fill all the area under a line
+ </summary>
+	<param name="color">an RRGGBB format hexadecimal number</param>
+	<param name="lineIndex">line indexes are determined by the order in which datasets are added. The first set is index 0, then index 1 etc</param>
+</member><member name="T:IncLibrary.GoogleChartSharp.FillArea">
+	<summary>
+ Fill the area between / under lines
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.FillAreaType.SingleLine">
+	<summary>
+ All area under the line will be filled
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.FillAreaType.MultiLine">
+	<summary>
+ The area between this line and the next will be filled
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.FillAreaType">
+	<summary>
+ Specify area fill behavior
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.PieChart.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a 2D pie chart
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.PieChart.#ctor(System.Int32,System.Int32,IncLibrary.GoogleChartSharp.PieChartType)">
+	<summary>
+ Create a pie chart of specified type
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+	<param name="pieChartType"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.PieChart.SetLegend(System.String[])">
+	<summary>
+ Legend is not supported on Pie Charts
+ </summary>
+	<param name="strs"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.PieChart.SetPieChartLabels(System.String[])">
+	<summary>
+ Set labels for the Pie Chart slices
+ </summary>
+	<param name="labels">strings that will be used as label text</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.PieChartType.TwoD">
+	<summary>
+ Two dimensional pie chart
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.PieChartType.ThreeD">
+	<summary>
+ Three dimensional pie chart
+ </summary>
+</member><member name="M:IncLibrary.IncFloatControl.ShowFloating">
+	<summary>
+ Shows the control as a floating Window child 
+ of the desktop.  To hide the control again,
+ use the <see cref="P:System.Windows.Forms.Control.Visible"/> property.
+ </summary>
+</member><member name="P:IncLibrary.IncFloatControl.CreateParams">
+	<summary>
+ Get the <see cref="T:System.Windows.Forms.CreateParams"/>
+ used to create the control.  Me override adds the
+ <code>WS_EX_NOACTIVATE</code>, <code>WS_EX_TOOLWINDOW</code>
+ and <code>WS_EX_TOPMOST</code> extended styles to make
+ the Window float on top.
+ </summary>
+</member><member name="M:IncLibrary.IncFloatControl.WndProc(System.Windows.Forms.Message@)">
+	<summary>
+ Overrides the standard Window Procedure to ensure the
+ window is transparent to all mouse events.
+ </summary>
+	<param name="m">Windows message to process.</param>
+</member><member name="M:IncLibrary.IncFloatControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+	<summary>
+ Overrides the standard painting procedure to render
+ the text associated with the control.
+ </summary>
+	<param name="e">PaintEvent Arguments</param>
+</member><member name="M:IncLibrary.IncFloatControl.#ctor">
+	<summary>
+ Constructs a new instance of Me control.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.LinearGradientFill.FillTarget">
+	<summary>
+ The area that will be filled.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.LinearGradientFill.Angle">
+	<summary>
+ specifies the angle of the gradient between 0 (horizontal) and 90 (vertical)
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.LinearGradientFill.#ctor(IncLibrary.GoogleChartSharp.ChartFillTarget,System.Int32)">
+	<summary>
+ Create a linear gradient
+ </summary>
+	<param name="fillTarget">area to be filled</param>
+	<param name="angle">specifies the angle of the gradient between 0 (horizontal) and 90 (vertical)</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.LinearGradientFill.AddColorOffsetPair(System.String,System.Double)">
+	<summary>
+ Add a color/offset pair to the linear gradient
+ </summary>
+	<param name="color">RRGGBB format hexadecimal number</param>
+	<param name="offset">specify at what point the color is pure where: 0 specifies the right-most chart position and 1 the left-most</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.LinearGradientFill.ColorOffsetPair.Color">
+	<summary>
+ RRGGBB format hexadecimal number
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.LinearGradientFill.ColorOffsetPair.Offset">
+	<summary>
+ specify at what point the color is pure where: 0 specifies the right-most 
+ chart position and 1 the left-most.
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.LinearGradientFill.ColorOffsetPair.#ctor(System.String,System.Double)">
+	<summary>
+	</summary>
+	<param name="color">RRGGBB format hexadecimal number</param>
+	<param name="offset">specify at what point the color is pure where: 0 specifies the right-most chart position and 1 the left-most</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.ScatterPlot.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a scatter plot
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.LineChartType.SingleDataSet">
+	<summary>
+ One line per dataset, points are evenly spaced along the x-axis
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.LineChartType.MultiDataSet">
+	<summary>
+ Two datasets per line. The first dataset is the x coordinates 
+ of the line. The second dataset is the Y coordinates of the line.
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.LineChartType">
+	<summary>
+ Specifies how the line chart handles datasets
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.LineChart.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a line chart with one line per dataset. Points are evenly spaced along the x-axis.
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.LineChart.#ctor(System.Int32,System.Int32,IncLibrary.GoogleChartSharp.LineChartType)">
+	<summary>
+ Create a line chart with the specified type.
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+	<param name="lineChartType">specifies how the chart handles datasets</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.LineChart.AddLineStyle(IncLibrary.GoogleChartSharp.LineStyle)">
+	<summary>
+ Apply a style to a line. Line styles are applied to lines in order, the 
+ first line will use the first line style.
+ </summary>
+	<param name="lineStyle"></param>
+</member><member name="P:IncLibrary.GoogleChartSharp.LineStyle.LineThickness">
+	<summary>
+ line thickness in pixels
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.LineStyle.LengthOfSegment">
+	<summary>
+ length of each solid line segment in pixels
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.LineStyle.LengthOfBlankSegment">
+	<summary>
+ length of each blank line segment in pixels
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.LineStyle.#ctor(System.Single,System.Single,System.Single)">
+	<summary>
+ Create a line style
+ </summary>
+	<param name="lineThickness">line thickness in pixels</param>
+	<param name="lengthOfSegment">length of each solid line segment in pixels</param>
+	<param name="lengthOfBlankSegment">length of each blank line segment in pixels</param>
+</member><member name="T:IncLibrary.GoogleChartSharp.LineStyle">
+	<summary>
+ Specifies how a line is drawn.
+ </summary>
+</member><member name="M:IncLibrary.PrintExport.MyPrintDocument_PrintPage_GRID(System.Object,System.Drawing.Printing.PrintPageEventArgs)">
+	<summary>
+ Handles the PrintPage event of the object of PrintDocument
+ </summary>
+	<remarks></remarks>
+</member><member name="M:IncLibrary.PrintExport.InitialisePrintDocument(System.String,System.Windows.Forms.PrintDialog)">
+	<summary>
+ Generic Funtion.
+ Initialises th Print Document with Document Name, Printer and Page Settings.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:IncLibrary.PrintExport.ExportToExcel(IncLibrary.SearchGrid,System.String)">
+	<summary>
+ Handles the event when user hits the Export to Excel Button for the Industry Grid.
+ Calls Generic function SaveGridDataInFileAndOpenInExcel to export Industry grid.
+ Then applies specific formatting for the Exported sheet.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:IncLibrary.GlassButton.BackColor">
+	<summary> 
+ Gets or sets the background color of the control. 
+ </summary>
+	<returns>A <see cref="T:System.Drawing.Color"/> value representing the background color.</returns>
+</member><member name="P:IncLibrary.GlassButton.ForeColor">
+	<summary> 
+ Gets or sets the foreground color of the control. 
+ </summary>
+	<returns>The foreground <see cref="T:System.Drawing.Color"/> of the control.</returns>
+</member><member name="P:IncLibrary.GlassButton.InnerBorderColor">
+	<summary> 
+ Gets or sets the inner border color of the control. 
+ </summary>
+	<returns>A <see cref="T:System.Drawing.Color"/> value representing the color of the inner border.</returns>
+</member><member name="P:IncLibrary.GlassButton.OuterBorderColor">
+	<summary> 
+ Gets or sets the outer border color of the control. 
+ </summary>
+	<returns>A <see cref="T:System.Drawing.Color"/> value representing the color of the outer border.</returns>
+</member><member name="P:IncLibrary.GlassButton.ShineColor">
+	<summary> 
+ Gets or sets the shine color of the control. 
+ </summary>
+	<returns>A <see cref="T:System.Drawing.Color"/> value representing the shine color.</returns>
+</member><member name="P:IncLibrary.GlassButton.GlowColor">
+	<summary> 
+ Gets or sets the glow color of the control. 
+ </summary>
+	<returns>A <see cref="T:System.Drawing.Color"/> value representing the glow color.</returns>
+</member><member name="P:IncLibrary.GlassButton.FadeOnFocus">
+	<summary> 
+ Gets or sets a value indicating whether the button should fade in and fade out when it's getting and loosing the focus. 
+ </summary>
+	<value><c>true</c> if fading with changing the focus; otherwise, <c>false</c>.</value>
+</member><member name="P:IncLibrary.GlassButton.State">
+	<summary> 
+ Gets the state of the button control. 
+ </summary>
+	<value>The state of the button control.</value>
+</member><member name="E:IncLibrary.GlassButton.InnerBorderColorChanged">
+	<summary>Occurs when the value of the <see cref="P:Glass.GlassButton.InnerBorderColor"/> property changes.</summary>
+</member><member name="M:IncLibrary.GlassButton.OnInnerBorderColorChanged(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:Glass.GlassButton.InnerBorderColorChanged"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="E:IncLibrary.GlassButton.OuterBorderColorChanged">
+	<summary>Occurs when the value of the <see cref="P:Glass.GlassButton.OuterBorderColor"/> property changes.</summary>
+</member><member name="M:IncLibrary.GlassButton.OnOuterBorderColorChanged(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:Glass.GlassButton.OuterBorderColorChanged"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="E:IncLibrary.GlassButton.ShineColorChanged">
+	<summary>Occurs when the value of the <see cref="P:Glass.GlassButton.ShineColor"/> property changes.</summary>
+</member><member name="M:IncLibrary.GlassButton.OnShineColorChanged(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:Glass.GlassButton.ShineColorChanged"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="E:IncLibrary.GlassButton.GlowColorChanged">
+	<summary>Occurs when the value of the <see cref="P:Glass.GlassButton.GlowColor"/> property changes.</summary>
+</member><member name="M:IncLibrary.GlassButton.OnGlowColorChanged(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:Glass.GlassButton.GlowColorChanged"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnSizeChanged(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnClick(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.Click"/> event. 
+ </summary>
+	<param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnEnter(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.Enter"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnLeave(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.Leave"/> event. 
+ </summary>
+	<param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+	<summary> 
+ Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)"/> event. 
+ </summary>
+	<param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+	<summary> 
+ Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)"/> event. 
+ </summary>
+	<param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.MouseDown"/> event. 
+ </summary>
+	<param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.MouseUp"/> event. 
+ </summary>
+	<param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+	<summary> 
+ Raises the <see cref="M:System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs)"/> event. 
+ </summary>
+	<param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnMouseEnter(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.MouseEnter"/> event. 
+ </summary>
+	<param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnMouseLeave(System.EventArgs)">
+	<summary> 
+ Raises the <see cref="E:System.Windows.Forms.Control.MouseLeave"/> event. 
+ </summary>
+	<param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+</member><member name="M:IncLibrary.GlassButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+	<summary> 
+ Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnPaint(System.Windows.Forms.PaintEventArgs)"/> event. 
+ </summary>
+	<param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+</member><member name="E:IncLibrary.GlassButton.Paint">
+	<summary> 
+ Occurs when the control is redrawn. 
+ </summary>
+</member><member name="P:IncLibrary.GlassButton.FlatAppearance">
+	<summary>This property is not relevant for this class.</summary>
+	<returns>This property is not relevant for this class.</returns>
+</member><member name="P:IncLibrary.GlassButton.FlatStyle">
+	<summary>This property is not relevant for this class.</summary>
+	<returns>This property is not relevant for this class.</returns>
+</member><member name="P:IncLibrary.GlassButton.UseVisualStyleBackColor">
+	<summary>This property is not relevant for this class.</summary>
+	<returns>This property is not relevant for this class.</returns>
+</member><member name="T:IncLibrary.GlassButton">
+	<summary> 
+ Represents a glass button control. 
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a chart
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+</member><member name="P:IncLibrary.GoogleChartSharp.Chart.Width">
+	<summary>
+ Chart width in pixels.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.Chart.Height">
+	<summary>
+ Chart height in pixels.
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetData(System.Int32[])">
+	<summary>
+ Set chart to use single integer dataset
+ </summary>
+	<param name="data"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetData(System.Collections.Generic.ICollection{System.Int32[]})">
+	<summary>
+ Set chart to use integer dataset collection
+ </summary>
+	<param name="data"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetData(System.Single[])">
+	<summary>
+ Set chart to use single float dataset
+ </summary>
+	<param name="data"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetData(System.Collections.Generic.ICollection{System.Single[]})">
+	<summary>
+ Set chart to use float dataset collection
+ </summary>
+	<param name="data"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetTitle(System.String)">
+	<summary>
+ Set chart title using default color and font size
+ </summary>
+	<param name="title">chart title text</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetTitle(System.String,System.String)">
+	<summary>
+ Set chart title using default font size
+ </summary>
+	<param name="title">chart title text</param>
+	<param name="color">chart title color an RRGGBB format hexadecimal number</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetTitle(System.String,System.String,System.Int32)">
+	<summary>
+ Set chart title
+ </summary>
+	<param name="title">chart title text</param>
+	<param name="color">chart title color an RRGGBB format hexadecimal number</param>
+	<param name="fontSize">chart title font size in pixels</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetDatasetColors(System.String[])">
+	<summary>
+ Set the color for each dataset, match colors to datasets by
+ specifying them in the same order the datasets were added to the
+ chart.
+ </summary>
+	<param name="datasetColors">an array of RRGGBB format hexadecimal numbers</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddSolidFill(IncLibrary.GoogleChartSharp.SolidFill)">
+	<summary>
+ Add a solid fill to this chart.
+ </summary>
+	<param name="solidFill"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddLinearGradientFill(IncLibrary.GoogleChartSharp.LinearGradientFill)">
+	<summary>
+ Add a linear gradient fill to this chart.
+ </summary>
+	<param name="linearGradientFill"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddLinearStripesFill(IncLibrary.GoogleChartSharp.LinearStripesFill)">
+	<summary>
+ Add a linear stripes fill to this chart.
+ </summary>
+	<param name="linearStripesFill"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetGrid(System.Single,System.Single)">
+	<summary>
+ Add a grid to the chart using default line segment and blank line segment length.
+ </summary>
+	<param name="xAxisStepSize">Space between x-axis grid lines in relation to axis range.</param>
+	<param name="yAxisStepSize">Space between y-axis grid lines in relation to axis range.</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetGrid(System.Single,System.Single,System.Single,System.Single)">
+	<summary>
+ Add a grid to the chart.
+ </summary>
+	<param name="xAxisStepSize">Space between x-axis grid lines in relation to axis range.</param>
+	<param name="yAxisStepSize">Space between y-axis grid lines in relation to axis range.</param>
+	<param name="lengthLineSegment">Length of each line segment in a grid line</param>
+	<param name="lengthBlankSegment">Length of each blank segment in a grid line</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddFillArea(IncLibrary.GoogleChartSharp.FillArea)">
+	<summary>
+ Add a fill area to the chart. Fill areas are fills between / under lines.
+ </summary>
+	<param name="fillArea"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddShapeMarker(IncLibrary.GoogleChartSharp.ShapeMarker)">
+	<summary>
+ Add a shape marker to the chart. Shape markers are used to call attention to a data point on the chart.
+ </summary>
+	<param name="shapeMarker"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddRangeMarker(IncLibrary.GoogleChartSharp.RangeMarker)">
+	<summary>
+ Add a range marker to the chart. Range markers are colored bands on the chart.
+ </summary>
+	<param name="rangeMarker"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.SetLegend(System.String[])">
+	<summary>
+ Set chart legend
+ </summary>
+	<param name="strs">legend labels</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.AddAxis(IncLibrary.GoogleChartSharp.ChartAxis)">
+	<summary>
+ Add an axis to the chart
+ </summary>
+	<param name="axis"></param>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.GetUrl">
+	<summary>
+ Return the chart api url for this chart
+ </summary>
+	<returns></returns>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.urlChartType">
+	<summary>
+ Returns the api chart identifier for the chart
+ </summary>
+	<returns></returns>
+</member><member name="M:IncLibrary.GoogleChartSharp.Chart.collectUrlElements">
+	<summary>
+ Collect all the elements that will be used in the chart url
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.Chart">
+	<summary>
+ Base type for all charts.
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.InvalidFeatureForChartTypeException">
+	<summary>
+ Thrown if the current chart type does not support the requested feature
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.ChartType">
+	<summary>
+ Chart types, used internally
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.RangeMarker.Color">
+	<summary>
+ an RRGGBB format hexadecimal number.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.RangeMarker.StartPoint">
+	<summary>
+ for horizontal range markers is the position on the y-axis at which the range starts where 0.00 is the bottom and 1.00 is the top.
+ for vertical range markers is the position on the x-axis at which the range starts where 0.00 is the left and 1.00 is the right.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.RangeMarker.EndPoint">
+	<summary>
+ for horizontal range markers is the position on the y-axis at which the range ends where 0.00 is the bottom and 1.00 is the top.
+ for vertical range markers is the position on the x-axis at which the range ends where 0.00 is the left and 1.00 is the right.
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.RangeMarker.#ctor(IncLibrary.GoogleChartSharp.RangeMarkerType,System.String,System.Double,System.Double)">
+	<summary>
+ Create a range marker for line charts and scatter plots
+ </summary>
+	<param name="rangeMarkerType"></param>
+	<param name="color">an RRGGBB format hexadecimal number</param>
+	<param name="startPoint">Must be between 0.0 and 1.0. 0.0 is axis start, 1.0 is axis end.</param>
+	<param name="endPoint">Must be between 0.0 and 1.0. 0.0 is axis start, 1.0 is axis end.</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.RangeMarkerType.Horizontal">
+	<summary>
+ A horizontal band across the chart area
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.RangeMarkerType.Vertical">
+	<summary>
+ A vertical band across the chart area
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.BarChartOrientation.Vertical">
+	<summary>
+ Bars will be positioned vertically
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.BarChartOrientation.Horizontal">
+	<summary>
+ Bars will be positioned horizontally
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.BarChartOrientation">
+	<summary>
+ The orientation of the bars.
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.BarChartStyle.Stacked">
+	<summary>
+ Multiple data sets will be stacked.
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.BarChartStyle.Grouped">
+	<summary>
+ Multiple data sets will be grouped.
+ </summary>
+</member><member name="T:IncLibrary.GoogleChartSharp.BarChartStyle">
+	<summary>
+ Bar chart style when using multiple data sets
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.BarChart.#ctor(System.Int32,System.Int32,IncLibrary.GoogleChartSharp.BarChartOrientation,IncLibrary.GoogleChartSharp.BarChartStyle)">
+	<summary>
+ Create a bar chart
+ </summary>
+	<param name="width">Width in pixels</param>
+	<param name="height">Height in pixels</param>
+	<param name="orientation">The orientation of the bars.</param>
+	<param name="style">Bar chart style when using multiple data sets</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.BarChart.SetBarWidth(System.Int32)">
+	<summary>
+ Set the width of the individual bars
+ </summary>
+	<param name="width">Width in pixels</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.BarChart.urlChartType">
+	<summary>
+ Return the chart identifier used in the chart url.
+ </summary>
+	<returns></returns>
+</member><member name="M:IncLibrary.GoogleChartSharp.BarChart.collectUrlElements">
+	<summary>
+ Collect all the elements that will make up the chart url.
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.BarChart.getChartType">
+	<summary>
+ Return the chart type for this chart
+ </summary>
+	<returns></returns>
+</member><member name="T:IncLibrary.GoogleChartSharp.BarChart">
+	<summary>
+ Bar Chart
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.VennDiagram.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a venn diagram
+ </summary>
+	<param name="width">width in pixels</param>
+	<param name="height">height in pixels</param>
+</member><member name="M:IncLibrary.HorizontalBarForDGV.PintaDegradado(System.Drawing.Color[],System.Windows.Forms.DataGridViewCellPaintingEventArgs,System.Int32[])">
+	<summary>
+ Does the hard job
+ </summary>
+	<param name="aColores">Color array to use.</param>
+	<param name="e">CellPainting event's parameters</param>
+	<param name="aPorcentajes">Percent array to show. It can be one or two. 
+ First shows bar percent and second shows target percent. 
+ If only one percent is passed and it's cero, 
+ it will fill all cell width with the glass bar.</param>
+	<remarks></remarks>
+</member><member name="T:IncLibrary.HorizontalBarForDGV">
+	<summary>
+ Draws a bar in a DatGridView cell.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:IncLibrary.GoogleChartSharp.LinearStripesFill.FillTarget">
+	<summary>
+ The area that will be filled.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.LinearStripesFill.Angle">
+	<summary>
+ specifies the angle of the gradient between 0 (vertical) and 90 (horizontal)
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.LinearStripesFill.#ctor(IncLibrary.GoogleChartSharp.ChartFillTarget,System.Int32)">
+	<summary>
+ Create a linear stripes fill.
+ </summary>
+	<param name="fillTarget">The area that will be filled.</param>
+	<param name="angle">specifies the angle of the gradient between 0 (vertical) and 90 (horizontal)</param>
+</member><member name="M:IncLibrary.GoogleChartSharp.LinearStripesFill.AddColorWidthPair(System.String,System.Double)">
+	<summary>
+ A color/width pair describes a linear stripe.
+ </summary>
+	<param name="color">RRGGBB format hexadecimal number</param>
+	<param name="width">must be between 0 and 1 where 1 is the full width of the chart</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.LinearStripesFill.ColorWidthPair.Color">
+	<summary>
+ RRGGBB format hexadecimal number
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.LinearStripesFill.ColorWidthPair.Width">
+	<summary>
+ must be between 0 and 1 where 1 is the full width of the chart
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.LinearStripesFill.ColorWidthPair.#ctor(System.String,System.Double)">
+	<summary>
+ Describes a linear stripe. Stripes are repeated until the chart is filled.
+ </summary>
+	<param name="color">RGGBB format hexadecimal number</param>
+	<param name="width">must be between 0 and 1 where 1 is the full width of the chart</param>
+</member><member name="P:IncLibrary.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:IncLibrary.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:IncLibrary.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:IncLibrary.frmImageResizer.components">
+	<summary>
+ Required designer variable.
+ </summary>
+</member><member name="M:IncLibrary.frmImageResizer.InitializeComponent">
+	<summary>
+ Required method for Designer support - do not modify
+ the contents of this method with the code editor.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ShapeMarker.HexColor">
+	<summary>
+ an RRGGBB format hexadecimal number.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ShapeMarker.DatasetIndex">
+	<summary>
+ the index of the line on which to draw the marker. This is 0 for the first data set, 1 for the second and so on
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ShapeMarker.DataPoint">
+	<summary>
+ a floating point value that specifies on which data point the marker will be drawn. This is 1 for the first data set, 2 for the second and so on. Specify a fraction to interpolate a marker between two points
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.ShapeMarker.Size">
+	<summary>
+ the size of the marker in pixels
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.ShapeMarker.#ctor(IncLibrary.GoogleChartSharp.ShapeMarkerType,System.String,System.Int32,System.Single,System.Int32)">
+	<summary>
+ Create a shape marker for points on line charts and scatter plots
+ </summary>
+	<param name="markerType"></param>
+	<param name="datasetIndex">the index of the line on which to draw the marker. This is 0 for the first data set, 1 for the second and so on</param>
+	<param name="dataPoint">a floating point value that specifies on which data point the marker will be drawn. This is 1 for the first data set, 2 for the second and so on. Specify a fraction to interpolate a marker between two points.</param>
+	<param name="size">the size of the marker in pixels</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.Arrow">
+	<summary>
+ A marker in the shape of an arrow
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.Cross">
+	<summary>
+ A marker in the shape of a cross
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.Diamond">
+	<summary>
+ A marker in the shape of a diamond
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.Circle">
+	<summary>
+ A marker in the shape of a circle
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.Square">
+	<summary>
+ A marker in the shape of a square
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.VerticalLineToDataPoint">
+	<summary>
+ A marker that is a vertical line from the x-axis to the data point
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.VerticalLine">
+	<summary>
+ A marker that is a vertical line from the x-axis to the top of the chart area
+ through the data point
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.HorizontalLine">
+	<summary>
+ A marker that is a horizontal line from the y-axis to the edge of the chart area 
+ through the data point
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ShapeMarkerType.XShape">
+	<summary>
+ A marker in the shape of an X
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.SolidFill.FillTarget">
+	<summary>
+ The area that will be filled.
+ </summary>
+</member><member name="P:IncLibrary.GoogleChartSharp.SolidFill.Color">
+	<summary>
+ an RRGGBB format hexadecimal number
+ </summary>
+</member><member name="M:IncLibrary.GoogleChartSharp.SolidFill.#ctor(IncLibrary.GoogleChartSharp.ChartFillTarget,System.String)">
+	<summary>
+ Create a solid fill
+ </summary>
+	<param name="fillTarget">The area that will be filled.</param>
+	<param name="color">an RRGGBB format hexadecimal number</param>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartFillTarget.Background">
+	<summary>
+ Fill the entire background of the chart
+ </summary>
+</member><member name="F:IncLibrary.GoogleChartSharp.ChartFillTarget.ChartArea">
+	<summary>
+ Fill only the chart area of the chart
+ </summary>
+</member><member name="M:IncLibrary.TreeGridPrinter.PrintPreviewTree(System.Windows.Forms.TreeView,System.String)">
+	<summary>
+ Shows a PrintPreview dialog displaying the Tree control passed in.
+ </summary>
+	<param name="tree">TreeView to print preview</param>
+</member><member name="M:IncLibrary.TreeGridPrinter.PrintTree(System.Windows.Forms.TreeView,System.String)">
+	<summary>
+ Prints a tree
+ </summary>
+	<param name="tree">TreeView to print</param>
+</member><member name="M:IncLibrary.TreeGridPrinter.PrepareTreeImage(System.Windows.Forms.TreeView)">
+	<summary>
+ Gets an image that shows the entire tree, not just what is visible on the form
+ </summary>
+	<param name="tree"></param>
+</member><member name="P:IncLibrary.InputGrid.CreateNewRow">
+	<summary>
+ This Specifies that input grid new row create after last column reached of last row.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:IncLibrary.InputGrid.EvaluateAggregateFunction(IncLibrary.InputGrid.AggregateFunction,System.String)">
+	<summary>
+	</summary>
+	<param name="AggregateOperation">
+ It defines that, what result you want to get ?
+ i.e SUM, AVG, MIN, MAX etc.
+ </param>
+	<param name="ColumnName">It requires, of which column you want to get result i.e. 'ColMarks'</param>
+	<returns>Returns an Object which would be further converted into the appropiate datatype i.e. Decimal or Number</returns>
+	<remarks>Column Should be Of Number/Integer/Money Type</remarks>
+</member><member name="M:IncLibrary.InputGrid.ValidateGrid(System.String)">
+	<summary>
+ This Function Validates the Input Grid.
+ 1. Set Default Values for appropiate Columns
+ 2. If Column is Mandatory and Blank, then this will Focus on the appropiate cell.
+ </summary>
+	<returns>'True', in case of properly validated</returns>
+	<remarks></remarks>
+</member><member name="F:IncLibrary.GlassButton.components">
+	<summary>
+ Required designer variable.
+ </summary>
+</member><member name="M:IncLibrary.GlassButton.Dispose(System.Boolean)">
+	<summary>
+ Clean up any resources being used.
+ </summary>
+	<param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+</member><member name="M:IncLibrary.GlassButton.InitializeComponent">
+	<summary>
+ Required method for Designer support - do not modify 
+ the contents of this method with the code editor.
+ </summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,37 @@
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.csprojResolveAssemblyReference.cache
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.BlackForm.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmProduct.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmBrand.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmCategory.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmMain.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmGeneral.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmLogin.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.Properties.Resources.resources
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.csproj.GenerateResource.Cache
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\StoreInventory.exe.config
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\StoreInventory.exe
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\StoreInventory.pdb
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\BussinessLayer.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\IncLibrary.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\MetroFramework.Design.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\MetroFramework.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\WindowsFormsApplication82.exe
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\DataAccessLayer.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\ServerLicensing.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\FtpLibrary.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\Common.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\stdole.dll
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\BussinessLayer.pdb
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\IncLibrary.pdb
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\IncLibrary.xml
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\WindowsFormsApplication82.pdb
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\DataAccessLayer.pdb
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\bin\Debug\Common.pdb
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.exe
+C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.pdb
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\StoreInventory.exe.config
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.exe
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.pdb
