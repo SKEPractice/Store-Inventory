@@ -69,8 +69,8 @@
             this.colBrandName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._CloseButton = new StoreInventory.ButtonZ();
             this.txtProductID = new System.Windows.Forms.TextBox();
+            this._CloseButton = new StoreInventory.ButtonZ();
             btnGetAllBrand = new IncLibrary.IncButton();
             btnClear = new IncLibrary.IncButton();
             this.grpProduct.SuspendLayout();
@@ -426,7 +426,6 @@
             this.dgvProduct.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvProduct.Size = new System.Drawing.Size(145, 444);
             this.dgvProduct.TabIndex = 12;
-            this.dgvProduct.Visible = false;
             this.dgvProduct.Click += new System.EventHandler(this.dgvProduct_Click);
             // 
             // txtPrice
@@ -550,6 +549,17 @@
             this.colCategoryName.ReadOnly = true;
             this.colCategoryName.Visible = false;
             // 
+            // txtProductID
+            // 
+            this.txtProductID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductID.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtProductID.Location = new System.Drawing.Point(419, 5);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(61, 23);
+            this.txtProductID.TabIndex = 23;
+            this.txtProductID.Visible = false;
+            // 
             // _CloseButton
             // 
             this._CloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -569,16 +579,6 @@
             this._CloseButton.TextLocation_Y = 1;
             this._CloseButton.UseVisualStyleBackColor = true;
             this._CloseButton.Click += new System.EventHandler(this._CloseButton_Click);
-            // 
-            // txtProductID
-            // 
-            this.txtProductID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductID.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtProductID.Location = new System.Drawing.Point(419, 5);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(61, 23);
-            this.txtProductID.TabIndex = 23;
             // 
             // frmProduct
             // 

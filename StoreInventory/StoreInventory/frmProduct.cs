@@ -23,7 +23,7 @@ namespace StoreInventory
    
         private void _CloseButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void frmProduct_Load(object sender, EventArgs e)
@@ -93,6 +93,7 @@ namespace StoreInventory
                 {
                     MessageBox.Show("New product added Successfully", "Product added", MessageBoxButtons.OK);
                     ClearControls();
+                    LoadGridProduct(balProduct.GetAllProduct(string.Empty));
                 } 
             }
         }
@@ -112,6 +113,7 @@ namespace StoreInventory
             {
                 MessageBox.Show("Product Detail Updated Successfully", "Update Product", MessageBoxButtons.OK);
                 ClearControls();
+                LoadGridProduct(balProduct.GetAllProduct(string.Empty));
             }
             {
 
@@ -120,19 +122,34 @@ namespace StoreInventory
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            DialogResult check;
+            check=MessageBox.Show("Are you sure you want to Delete", "Delete Varification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (check==DialogResult.No)
+            {
+                return;
+            }
+            if (balProduct.DeleteProduct(Convert.ToInt32(txtProductID.Text)))
+            {
+                MessageBox.Show("Product Deleted Successfully", "Delete Product", MessageBoxButtons.OK);
+                ClearControls();
+                LoadGridProduct(balProduct.GetAllProduct(string.Empty));
+            }
         }
 
         private void btnGetAllBrand_Click(object sender, EventArgs e)
         {
-
+            DataTable dtProduct = new DataTable();
+            dtProduct = balProduct.GetAllProduct(string.Empty);
+            LoadGridProduct(dtProduct);
         }
 
         private void ClearControls()
         {
             erpGeneral.Clear();
+            dgvProduct.DataSource = null;
             dgvFeatures.DataSource = null;
             dgvFeatures.Rows.Clear();
+            dgvProduct.Rows.Clear();
            // dgvFeatures.ClearSelection();
             Action<Control.ControlCollection> func = null;
 
@@ -252,6 +269,10 @@ namespace StoreInventory
 
         private void dgvProduct_Click(object sender, EventArgs e)
         {
+            if (dgvProduct.Rows.Count<=0)
+            {
+                return;
+            }
             string features = dgvProduct.CurrentRow.Cells["colFeatures"].Value.ToString();
             string[] featuresList= features.Split('|');
             dgvFeatures.Rows.Clear();

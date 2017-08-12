@@ -71,6 +71,7 @@
             this.addBrandToolStripMenuItem.Name = "addBrandToolStripMenuItem";
             this.addBrandToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addBrandToolStripMenuItem.Text = "Add Brand";
+            this.addBrandToolStripMenuItem.Click += new System.EventHandler(this.addBrandToolStripMenuItem_Click);
             // 
             // addProductToolStripMenuItem
             // 
@@ -78,6 +79,7 @@
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
             this.addProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
+            this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
             // frmMain
             // 
