@@ -117,32 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAOlJREFUSEu1
-        1l0KwjAQBOAeySN4BI/gEby5T4J/VHckA+MytcF0F74HJyUjCYVOMa/mHuaG2Sjd62uhkg0r2LCCDSvY
-        sIINK9hQncIxZXQOWFtaVzYklHD2QddQcgictTIbkm6EYVkuweQ/ktmQsOEu6GDDXIJn8Kzbg2yoXJlO
-        TwnYMFsq6y0BG2bYLB8XZu1elA3VUgmnt8yG5EpwXPkYe8psSHg3dHgnkMuG3iN9YfPF57KhIkAZjkZL
-        CBmOFiVuXdmwgg0rbPox8osNK9hwazg1u7ClR/gU3cK1/XAP/usZLiE+TKf5DalRT/e2Dv0RAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAMFJREFUSEu1
-        llEKgzAQBXOkHqFH6P2P0Y9Sa1u7K29B6rAfyWZgML4nG1CQNONpvnR9a70NejcfWi+mzz09VO3XXM32
-        UTDbfTcqKvXXh0W1/s2wmCGGM8TwZvZyNWkmh4PgTAwHwZkYDoIzMRTUZQbYYSioywyww1BQlxlgh6Gg
-        LjPADkNBXWaAHYaCuswAOwwFdZkBdhgOgjMpvJi9+H+SZmI4Qwyr3c8MVMwQw2r9JIRFpb7J6VznwfG+
-        17+TVdt+Zg8mn4/BUWsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAJRJREFUSEu1
-        1ssNwjAUBdFXEiVQAv2XwQIUfuEaJRszq9jzpKMkY8kLe5PKLLHGZ3u/b9+jnt33X7DUqwsWjAaMBowG
-        jAaMBowGjAaMBowGjAaMBowGjAaMlzg656A9OQ4O7olxcHBPiqc4Ou3YaU+Mhnp3wXANXJjtEbhgqFsX
-        ZmtX0/4Zf+e3x1m/Xvu9tyPLs9YvdaRidAjhmPEAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="btnGetAllCategory.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="colSN.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colVendorName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="colVendorID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

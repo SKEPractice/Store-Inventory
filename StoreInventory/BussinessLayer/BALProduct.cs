@@ -59,7 +59,7 @@ namespace BussinessLayer
         {
             SqlParameter[] pram = new SqlParameter[]
             {
-                new SqlParameter("productID",productID),
+                new SqlParameter("@productID",productID),
                 new SqlParameter("@productName",productName),
                 new SqlParameter("@brandID",brandID),
                 new SqlParameter("@price",price),
