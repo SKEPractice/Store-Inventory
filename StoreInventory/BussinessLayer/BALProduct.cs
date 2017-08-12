@@ -24,7 +24,7 @@ namespace BussinessLayer
                     from Product
                     inner join Brand on Product.BrandID=Brand.BrandID
                     inner join Category on Brand.CategoryID = Category.CategoryID
-                    where BrandName like @filterString";
+                    where productName like @filterString";
             dt = DAO.GetTable(query, pram, CommandType.Text);
             return dt;
         }

@@ -18,11 +18,24 @@ namespace BussinessLayer
             {
                 new SqlParameter("@filterString","%"+filterString+"%")
             };
-            string query= "select BrandID,BrandName from Brand where BrandName like @filterString";
+            string query = @"select BrandID,BrandName,Category.CategoryID,Category.CategoryName  from Brand
+                            inner join category on Brand.CategoryID = Category.CategoryID
+                            where BrandName like @filterString";
             dt = DAO.GetTable(query, pram, CommandType.Text);
             return dt;
         }
-        public DataTable GetAllBrand(string filterString,Int32 categoryID)
+        public DataTable GetAllBrandByCategory(Int32 categoryID)
+        {
+            DataTable dt = new DataTable();
+            SqlParameter[] pram = new SqlParameter[]
+            {
+                new SqlParameter("@categoryID",categoryID)
+            };
+            string query = "select BrandID,BrandName from Brand where CategroyID=@categoryID";
+            dt = DAO.GetTable(query, pram, CommandType.Text);
+            return dt;
+        }
+        public DataTable GetAllBrand(string filterString, Int32 categoryID)
         {
             DataTable dt = new DataTable();
             SqlParameter[] pram = new SqlParameter[]
@@ -45,7 +58,7 @@ namespace BussinessLayer
             dt = DAO.GetTable(query, pram, CommandType.Text);
             return dt;
         }
-        public bool AddBrand(string brandName,int categoryID)
+        public bool AddBrand(string brandName, int categoryID)
         {
             SqlParameter[] pram = new SqlParameter[]
             {
@@ -70,7 +83,7 @@ namespace BussinessLayer
             }
             return false;
         }
-        public bool UpdateBrand(string brandName, int brandID,int categoryID)
+        public bool UpdateBrand(string brandName, int brandID, int categoryID)
         {
             SqlParameter[] pram = new SqlParameter[]
             {

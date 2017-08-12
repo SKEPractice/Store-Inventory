@@ -87,7 +87,7 @@ namespace StoreInventory
                 string productFeatures= dgvFeatures.Rows[0].Cells["colFeaturesList"].Value.ToString();
                 for (int i = 1; i < dgvFeatures.Rows.Count-1; i++)
                 {
-                    productFeatures = productFeatures+"|"+ dgvFeatures.Rows[i].Cells["colFeaturesList"].ToString();
+                    productFeatures = productFeatures+"|"+ dgvFeatures.Rows[i].Cells["colFeaturesList"].Value.ToString();
                 }
                 if (balProduct.AddProduct(txtProductName.Text.Trim(), Convert.ToDouble(txtPrice.Text), Convert.ToInt32(cboBrand.SelectedValue.ToString()), productFeatures))
                 {
@@ -103,7 +103,7 @@ namespace StoreInventory
             string productFeatures = dgvFeatures.Rows[0].Cells["colFeaturesList"].Value==null?string.Empty: dgvFeatures.Rows[0].Cells["colFeaturesList"].Value.ToString();
             for (int i = 1; i < dgvFeatures.Rows.Count-1; i++)
             {
-                productFeatures = productFeatures + "|" + dgvFeatures.Rows[i].Cells["colFeaturesList"].ToString();
+                productFeatures = productFeatures + "|" + dgvFeatures.Rows[i].Cells["colFeaturesList"].Value.ToString();
             }
             Int32 productID=Convert.ToInt32 (txtProductID.Text);
             double productPrice = Convert.ToDouble(txtPrice.Text);
@@ -254,8 +254,11 @@ namespace StoreInventory
         {
             string features = dgvProduct.CurrentRow.Cells["colFeatures"].Value.ToString();
             string[] featuresList= features.Split('|');
-            for (int i = 0; i < featuresList.Length-1; i++)
+            dgvFeatures.Rows.Clear();
+            dgvFeatures.DataSource = null;
+            for (int i = 0; i < featuresList.Length; i++)
             {
+                dgvFeatures.Rows.Add();
                 dgvFeatures.Rows[i].Cells["colFeaturesList"].Value = featuresList[i];
             }
             txtProductID.Text = dgvProduct.CurrentRow.Cells["colProductID"].Value.ToString();

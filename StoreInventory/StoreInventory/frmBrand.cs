@@ -183,9 +183,11 @@ namespace StoreInventory
             categoryForm.ShowDialog();
         }
 
-        // private void cboCategory_TextChanged(object sender, EventArgs e)
-        //{
-        //     //LoadCboCategory(cboCategory.Text);
-        // }
+        private void cboCategory_TextChanged(object sender, EventArgs e)
+        {
+            //DataTable dt = new DataTable();
+            //dt=balBrand.GetAllBrandByCategory(Convert.ToInt32(cboCategory.SelectedValue.ToString()));
+            //LoadGrid(dt);
+        }
     }
 }
