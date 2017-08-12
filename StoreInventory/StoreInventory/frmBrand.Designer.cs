@@ -30,15 +30,15 @@
         {
             IncLibrary.IncButton btnGetAllBrand;
             IncLibrary.IncButton btnClear;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBrandName = new System.Windows.Forms.TextBox();
             this.grpCategory = new System.Windows.Forms.GroupBox();
-            this.incButton1 = new IncLibrary.IncButton();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
+            this.btnOpenCategory = new IncLibrary.IncButton();
             this.incLabel2 = new IncLibrary.IncLabel();
             this.incLabel1 = new IncLibrary.IncLabel();
-            this.txtCategoryID = new System.Windows.Forms.TextBox();
             this.txtBrandID = new System.Windows.Forms.TextBox();
             this.dgvBrand = new System.Windows.Forms.DataGridView();
             this.colSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,6 @@
             this.colBrandName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.btnUpdate = new IncLibrary.IncButton();
             this.btnDelete = new IncLibrary.IncButton();
             this.btnSave = new IncLibrary.IncButton();
@@ -108,13 +107,12 @@
             // 
             // grpCategory
             // 
-            this.grpCategory.Controls.Add(this.incButton1);
+            this.grpCategory.Controls.Add(this.cboCategory);
+            this.grpCategory.Controls.Add(this.btnOpenCategory);
             this.grpCategory.Controls.Add(this.incLabel2);
             this.grpCategory.Controls.Add(this.incLabel1);
-            this.grpCategory.Controls.Add(this.txtCategoryID);
             this.grpCategory.Controls.Add(this.txtBrandID);
             this.grpCategory.Controls.Add(this.dgvBrand);
-            this.grpCategory.Controls.Add(this.txtCategoryName);
             this.grpCategory.Controls.Add(this.txtBrandName);
             this.grpCategory.Controls.Add(this.btnUpdate);
             this.grpCategory.Controls.Add(this.btnDelete);
@@ -130,21 +128,31 @@
             this.grpCategory.TabStop = false;
             this.grpCategory.Text = "Add  Sub Category";
             // 
-            // incButton1
+            // cboCategory
             // 
-            this.incButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.incButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.incButton1.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
-            this.incButton1.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.incButton1.Location = new System.Drawing.Point(420, 35);
-            this.incButton1.Name = "incButton1";
-            this.incButton1.NextControl = null;
-            this.incButton1.OuterBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.incButton1.PreviousControl = null;
-            this.incButton1.ShineColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.incButton1.Size = new System.Drawing.Size(20, 23);
-            this.incButton1.TabIndex = 16;
-            this.incButton1.Text = "+";
+            this.cboCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(210, 32);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(204, 23);
+            this.cboCategory.TabIndex = 17;
+            // 
+            // btnOpenCategory
+            // 
+            this.btnOpenCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnOpenCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnOpenCategory.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
+            this.btnOpenCategory.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnOpenCategory.Location = new System.Drawing.Point(421, 33);
+            this.btnOpenCategory.Name = "btnOpenCategory";
+            this.btnOpenCategory.NextControl = null;
+            this.btnOpenCategory.OuterBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnOpenCategory.PreviousControl = null;
+            this.btnOpenCategory.ShineColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnOpenCategory.Size = new System.Drawing.Size(20, 23);
+            this.btnOpenCategory.TabIndex = 16;
+            this.btnOpenCategory.Text = "+";
+            this.btnOpenCategory.Click += new System.EventHandler(this.btnOpenCategory_Click);
             // 
             // incLabel2
             // 
@@ -172,17 +180,6 @@
             this.incLabel1.Text = "Brand Name";
             this.incLabel1.ValueByOrchestrator = "Brand Name";
             // 
-            // txtCategoryID
-            // 
-            this.txtCategoryID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.txtCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoryID.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtCategoryID.Location = new System.Drawing.Point(6, 58);
-            this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.Size = new System.Drawing.Size(51, 23);
-            this.txtCategoryID.TabIndex = 13;
-            this.txtCategoryID.Visible = false;
-            // 
             // txtBrandID
             // 
             this.txtBrandID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
@@ -199,14 +196,14 @@
             this.dgvBrand.AllowUserToAddRows = false;
             this.dgvBrand.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.dgvBrand.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBrand.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBrand.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBrand.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSN,
@@ -214,27 +211,27 @@
             this.colBrandName,
             this.colCategoryName,
             this.colCategoryID});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBrand.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBrand.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBrand.EnableHeadersVisualStyles = false;
             this.dgvBrand.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.dgvBrand.Location = new System.Drawing.Point(106, 133);
             this.dgvBrand.Name = "dgvBrand";
             this.dgvBrand.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBrand.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBrand.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBrand.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvBrand.Size = new System.Drawing.Size(343, 332);
             this.dgvBrand.TabIndex = 12;
@@ -271,18 +268,6 @@
             this.colCategoryID.Name = "colCategoryID";
             this.colCategoryID.ReadOnly = true;
             this.colCategoryID.Visible = false;
-            // 
-            // txtCategoryName
-            // 
-            this.txtCategoryName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.txtCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoryName.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtCategoryName.Location = new System.Drawing.Point(210, 35);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(204, 23);
-            this.txtCategoryName.TabIndex = 9;
-            this.txtCategoryName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCategoryName_MouseClick);
-            this.txtCategoryName.TextChanged += new System.EventHandler(this.txtCategoryName_TextChanged);
             // 
             // btnUpdate
             // 
@@ -383,6 +368,7 @@
             this.Name = "frmBrand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmBrand_Load);
             this.grpCategory.ResumeLayout(false);
             this.grpCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBrand)).EndInit();
@@ -407,11 +393,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoryID;
         private IncLibrary.IncLabel incLabel2;
         private IncLibrary.IncLabel incLabel1;
-        private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.TextBox txtCategoryID;
-        private IncLibrary.IncButton incButton1;
+        private IncLibrary.IncButton btnOpenCategory;
         private System.Windows.Forms.Panel panel1;
         private ButtonZ _CloseButton;
+        private System.Windows.Forms.ComboBox cboCategory;
     }
 }
 

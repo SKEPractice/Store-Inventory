@@ -33,8 +33,6 @@ C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInvent
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.exe
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\StoreInventory\obj\Debug\StoreInventory.pdb
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\StoreInventory.exe.config
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.exe
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.pdb
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\StoreInventory.exe
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\StoreInventory.pdb
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\BussinessLayer.dll
@@ -66,3 +64,5 @@ C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\D
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmLogin.resources
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.Properties.Resources.resources
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.csproj.GenerateResource.Cache
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.exe
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.pdb

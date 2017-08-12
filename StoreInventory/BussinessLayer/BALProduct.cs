@@ -19,11 +19,16 @@ namespace BussinessLayer
             {
                 new SqlParameter("@filterString","%"+filterString+"%")
             };
-            string query = "select top(15) BrandID,BrandName,Category.CategoryID,Category.CategoryName from Brand inner join Category on Brand.CategoryID = Category.CategoryID where BrandName like @filterString";
+            string query = string.Empty;
+            query = @"select top(15) productID,productName,price,features,brand.brandID,BrandName,category.categoryID,categoryName 
+                    from Product
+                    inner join Brand on Product.BrandID=Brand.BrandID
+                    inner join Category on Brand.CategoryID = Category.CategoryID
+                    where BrandName like @filterString";
             dt = DAO.GetTable(query, pram, CommandType.Text);
             return dt;
         }
-        public bool AddProduct(string productName, long price, int brandID,String Features)
+        public bool AddProduct(string productName, double price, int brandID, String Features)
         {
             SqlParameter[] pram = new SqlParameter[]
             {
@@ -38,27 +43,29 @@ namespace BussinessLayer
             }
             return false;
         }
-        public bool DeleteBrand(int brandID)
+        public bool DeleteProduct(int productID)
         {
             SqlParameter[] pram = new SqlParameter[]
             {
-                new SqlParameter("@brandID",brandID)
+                new SqlParameter("@productID",productID)
             };
-            if (DAO.IUD("Delete from Brand where brandID = @brandID", pram, CommandType.Text) > 0)
+            if (DAO.IUD("Delete from Product where ProductID = @ProductID", pram, CommandType.Text) > 0)
             {
                 return true;
             }
             return false;
         }
-        public bool UpdateBrand(string brandName, int brandID, int categoryID)
+        public bool UpdateProduct(long productID, string productName, double price, int brandID, String Features)
         {
             SqlParameter[] pram = new SqlParameter[]
             {
+                new SqlParameter("productID",productID),
+                new SqlParameter("@productName",productName),
                 new SqlParameter("@brandID",brandID),
-                new SqlParameter("@brandName",brandName),
-                new SqlParameter("@categoryID",categoryID)
+                new SqlParameter("@price",price),
+                new SqlParameter("@features",Features)
             };
-            if (DAO.IUD("Update Brand set brandName=@brandName,CategoryID=@categoryID where BrandID=@brandID", pram, CommandType.Text) > 0)
+            if (DAO.IUD("Update Product set productName=@productName,BrandID=@brandID,price=@price,features=@features where productID=@productID", pram, CommandType.Text) > 0)
             {
                 return true;
             }
