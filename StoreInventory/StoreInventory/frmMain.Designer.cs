@@ -33,13 +33,18 @@
             this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addBrandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masterToolStripMenuItem});
+            this.masterToolStripMenuItem,
+            this.registrationToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 36);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(862, 24);
@@ -51,7 +56,8 @@
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCategoryToolStripMenuItem,
             this.addBrandToolStripMenuItem,
-            this.addProductToolStripMenuItem});
+            this.addProductToolStripMenuItem,
+            this.addUserToolStripMenuItem});
             this.masterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
@@ -80,6 +86,37 @@
             this.addProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
+            // 
+            // addUserToolStripMenuItem
+            // 
+            this.addUserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addUserToolStripMenuItem.Text = "Add User";
+            // 
+            // registrationToolStripMenuItem
+            // 
+            this.registrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vendorToolStripMenuItem,
+            this.userToolStripMenuItem});
+            this.registrationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.registrationToolStripMenuItem.Text = "Registration";
+            // 
+            // vendorToolStripMenuItem
+            // 
+            this.vendorToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.vendorToolStripMenuItem.Name = "vendorToolStripMenuItem";
+            this.vendorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vendorToolStripMenuItem.Text = "Vendor";
+            // 
+            // userToolStripMenuItem
+            // 
+            this.userToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userToolStripMenuItem.Text = "User";
             // 
             // frmMain
             // 
@@ -110,5 +147,9 @@
         private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addBrandToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
     }
 }
