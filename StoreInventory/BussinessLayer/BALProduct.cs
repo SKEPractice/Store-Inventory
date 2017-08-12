@@ -23,14 +23,16 @@ namespace BussinessLayer
             dt = DAO.GetTable(query, pram, CommandType.Text);
             return dt;
         }
-        public bool AddBrand(string brandName, int categoryID)
+        public bool AddProduct(string productName, long price, int brandID,String Features)
         {
             SqlParameter[] pram = new SqlParameter[]
             {
-                new SqlParameter("@brandName",brandName),
-                new SqlParameter("@categoryID",categoryID)
+                new SqlParameter("@productName",productName),
+                new SqlParameter("@brandID",brandID),
+                new SqlParameter("@price",price),
+                new SqlParameter("@features",Features)
             };
-            if (DAO.IUD("insert into Brand values(@brandName,@categoryID)", pram, CommandType.Text) > 0)
+            if (DAO.IUD("insert into Product values(@productName,@brandID,@price,@features)", pram, CommandType.Text) > 0)
             {
                 return true;
             }

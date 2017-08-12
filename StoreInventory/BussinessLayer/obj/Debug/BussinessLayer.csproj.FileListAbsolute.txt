@@ -7,3 +7,12 @@ C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\BussinessLa
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\BussinessLayer\obj\Debug\BussinessLayer.dll
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\bin\Debug\Common.dll
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\bin\Debug\Common.pdb
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\BussinessLayer\obj\Debug\BussinessLayer.pdb

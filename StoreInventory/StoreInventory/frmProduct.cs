@@ -144,14 +144,7 @@ namespace StoreInventory
            
         //}
 
-        //private bool ValidateField()
-        //{
-        //    if (txtBrandName.Text.Trim()==string.Empty||txtCategoryName.Text.Trim()==string.Empty)
-        //    {
-        //        return true;
-        //    }
-        //    return false;
-        //}
+ 
 
         //private void clear(object sender, EventArgs e)
         //{
@@ -242,7 +235,31 @@ namespace StoreInventory
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            erpGeneral.Clear();
             ClearControls();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!ValidateField())
+            {
+                
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGetAllBrand_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ClearControls()
@@ -284,22 +301,57 @@ namespace StoreInventory
             brandForm.ShowDialog();
         }
 
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
-        //private void frmBrand_Load(object sender, EventArgs e)
-        //{
-        //    //LoadCboCategory();
-        //}
-        //BALCategory balCategory = new BALCategory();
-        //private void LoadCboCategory()
-        //{
-        //    DataTable dt = new DataTable();
-        //    dt = balCategory.GetAllCategory();
-        //    DataRow dr = dt.NewRow();
-        //    dr["Name"] = "--Please Select--";
-        //    dt.Rows.InsertAt(dr, 0);
-        //    cboCategoryName.DataSource = dt;
-        //    cboCategoryName.DisplayMember = "CategoryName";
-        //    cboCategoryName.ValueMember = "CategoryID";
-        //}
+            //only allows a single decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+        }
+        private bool  ValidateField()
+        {
+            if (cboCategory.SelectedIndex == 0)
+            {
+                cboCategory.Focus();
+                erpGeneral.SetError(cboCategory, "Please Select Category");
+                return true;
+            }
+            else if (cboBrand.SelectedIndex==0)
+            {
+                cboBrand.Focus();
+                erpGeneral.SetError(cboBrand, "Please Select Brand");
+                return true;
+            }
+            else if (txtProductName.Text.Trim()==string.Empty)
+            {
+                txtProductName.Focus();
+                erpGeneral.SetError(txtProductName, "Please provide product Name");
+                return true;
+            }
+            else if (txtPrice.Text.Trim()==string.Empty)
+            {
+                txtPrice.Focus();
+                erpGeneral.SetError(txtPrice, "Please provide price");
+                return true;
+            }
+            else if (dgvFeatures.Rows.Count<=0 || dgvFeatures.Rows[0].Cells["colFeatures"].ToString().Trim()==string.Empty)
+            {
+                dgvFeatures.Focus();
+                erpGeneral.SetError(dgvFeatures, "Please provide at least one feature");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
