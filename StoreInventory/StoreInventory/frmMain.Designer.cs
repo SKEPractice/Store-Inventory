@@ -67,7 +67,7 @@
             // 
             this.addCategoryToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addCategoryToolStripMenuItem.Text = "Add Category";
             this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click_1);
             // 
@@ -75,7 +75,7 @@
             // 
             this.addBrandToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addBrandToolStripMenuItem.Name = "addBrandToolStripMenuItem";
-            this.addBrandToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addBrandToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addBrandToolStripMenuItem.Text = "Add Brand";
             this.addBrandToolStripMenuItem.Click += new System.EventHandler(this.addBrandToolStripMenuItem_Click);
             // 
@@ -83,7 +83,7 @@
             // 
             this.addProductToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
@@ -91,7 +91,7 @@
             // 
             this.addUserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addUserToolStripMenuItem.Text = "Add User";
             // 
             // registrationToolStripMenuItem
@@ -110,6 +110,7 @@
             this.vendorToolStripMenuItem.Name = "vendorToolStripMenuItem";
             this.vendorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.vendorToolStripMenuItem.Text = "Vendor";
+            this.vendorToolStripMenuItem.Click += new System.EventHandler(this.vendorToolStripMenuItem_Click);
             // 
             // userToolStripMenuItem
             // 

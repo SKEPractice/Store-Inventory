@@ -37,5 +37,12 @@ namespace StoreInventory
             productForm.Show();
             productForm.MdiParent = this;
         }
+
+        private void vendorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVendor vendorForm = new frmVendor();
+            vendorForm.Show();
+            vendorForm.MdiParent = this;
+        }
     }
 }

@@ -19,20 +19,6 @@ namespace StoreInventory
         }
 
         BALVendor balVendor = new BALVendor();
-         
-        //private void LoadCategoryGrid(DataTable dt)
-        //{
-        //    this.dgvVendor.DataSource = null;
-        //    this.dgvVendor.Rows.Clear();
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        dgvVendor.Rows.Add();
-        //        dgvVendor.Rows[i].Cells["colSN"].Value = i;
-        //        dgvVendor.Rows[i].Cells["colCategoryID"].Value = dt.Rows[i]["CategoryID"].ToString();
-        //        dgvVendor.Rows[i].Cells["colCategoryName"].Value = dt.Rows[i]["CategoryName"].ToString();
-        //    }
-        //}
-
         private void closeButton_MouseLeave(object sender, EventArgs e)
         {
             closeButton.ForeColor = Color.White;
@@ -47,7 +33,6 @@ namespace StoreInventory
         {
             this.Close();
         }
-       
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -59,6 +44,7 @@ namespace StoreInventory
             }
             
         }
+
         private void LoadGridVendor()
         {
             DataTable dtVendor = new DataTable();
@@ -105,6 +91,7 @@ namespace StoreInventory
 
             func(Controls);
         }
+
         private bool ValidateField()
         {
             if (txtVendorName.Text.Trim()==string.Empty)
