@@ -3,7 +3,3 @@ C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\Common\bin\
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\Common\obj\Debug\Common.dll
 C:\Users\Yugesh\Documents\Visual Studio 2015\Projects\StoreInventory\Common\obj\Debug\Common.pdb
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\Common\bin\Debug\Common.dll
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\Common\bin\Debug\Common.pdb
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\Common\obj\Debug\Common.dll
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\Common\obj\Debug\Common.pdb

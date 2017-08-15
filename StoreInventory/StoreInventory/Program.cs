@@ -16,7 +16,7 @@ namespace StoreInventory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVendor());
+            Application.Run(new frmMain());
         }
     }
 }

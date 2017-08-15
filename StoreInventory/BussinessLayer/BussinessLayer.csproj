@@ -43,6 +43,7 @@
     <Compile Include="BALBrand.cs" />
     <Compile Include="BALCategory.cs" />
     <Compile Include="BALProduct.cs" />
+    <Compile Include="BALPurchase.cs" />
     <Compile Include="BALUser.cs" />
     <Compile Include="BALVendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

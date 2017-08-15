@@ -42,7 +42,15 @@ namespace StoreInventory
         {
             frmVendor vendorForm = new frmVendor();
             vendorForm.Show();
+           // vendorForm.WindowState = vendorForm.MaximumSize();
             vendorForm.MdiParent = this;
+        }
+
+        private void purchaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPurchase purchaseForm = new frmPurchase();
+            purchaseForm.Show();
+            purchaseForm.MdiParent = this;
         }
     }
 }

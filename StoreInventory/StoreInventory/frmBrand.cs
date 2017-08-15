@@ -160,6 +160,10 @@ namespace StoreInventory
         //load grid value to the text box when a row is slected from a data grid view
         private void dgvBrand_MouseClick(object sender, MouseEventArgs e)
         {
+            if (dgvBrand.Rows.Count<=0)
+            {
+                return;
+            }
             txtBrandID.Text = dgvBrand.CurrentRow.Cells["colBrandID"].Value.ToString();
             txtBrandName.Text = dgvBrand.CurrentRow.Cells["colBrandName"].Value.ToString();
             cboCategory.SelectedValue = dgvBrand.CurrentRow.Cells["colCategoryID"].Value.ToString();
