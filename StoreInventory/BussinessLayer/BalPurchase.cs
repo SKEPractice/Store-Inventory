@@ -34,6 +34,21 @@ namespace BussinessLayer
             }
             return false;
         }
+        public bool AddPurchaseItem(long productID, Int32 vendorID, long productPrice, Int32 quantity)
+        {
+            SqlParameter[] pram = new SqlParameter[]
+            {
+                new SqlParameter("@productID",productID),
+                new SqlParameter("@vendorID",vendorID),
+                new SqlParameter("@productPrice",productPrice),
+                new SqlParameter("@quantity",quantity)
+            };
+            if (DAO.IUD("insert into Purchase values(@productID,@vendorID,@productPrice,@quantity)", pram, CommandType.Text) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
         public bool DeletePurchase(int purchaseID)
         {
             SqlParameter[] pram = new SqlParameter[]
