@@ -30,7 +30,7 @@ namespace DataAccessLayer
             using (SqlCommand cmd=new SqlCommand(sql,GetConnection()))
             {
                 cmd.CommandType = cmdType;
-                if (pram != null || pram.Length!=0 )
+                if (pram != null && pram.Length!=0 )
                 {
                     cmd.Parameters.AddRange(pram);
                 }

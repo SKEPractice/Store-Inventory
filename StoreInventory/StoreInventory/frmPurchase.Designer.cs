@@ -50,19 +50,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVendor = new System.Windows.Forms.DataGridView();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.erpGeneral = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGrandTotal = new System.Windows.Forms.TextBox();
+            this.closeButton = new StoreInventory.ButtonZ();
             this.colSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVendorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVendorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.erpGeneral = new System.Windows.Forms.ErrorProvider(this.components);
+            this.colPurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPurchaseQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtGrandTotal = new System.Windows.Forms.TextBox();
-            this.closeButton = new StoreInventory.ButtonZ();
             GetPurchaseDetail = new IncLibrary.IncButton();
             btnClear = new IncLibrary.IncButton();
             this.panel1.SuspendLayout();
@@ -330,8 +330,8 @@
             this.colVendorName,
             this.colProductID,
             this.colProductName,
-            this.colProductPrice,
-            this.colProductQuantity,
+            this.colPurchasePrice,
+            this.colPurchaseQuantity,
             this.colTotal});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
@@ -358,54 +358,6 @@
             this.dgvVendor.TabIndex = 12;
             this.dgvVendor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvVendor_MouseClick);
             // 
-            // colSN
-            // 
-            this.colSN.HeaderText = "SN";
-            this.colSN.Name = "colSN";
-            this.colSN.ReadOnly = true;
-            this.colSN.Width = 30;
-            // 
-            // colVendorID
-            // 
-            this.colVendorID.HeaderText = "VendorID";
-            this.colVendorID.Name = "colVendorID";
-            this.colVendorID.ReadOnly = true;
-            this.colVendorID.Visible = false;
-            // 
-            // colVendorName
-            // 
-            this.colVendorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.colVendorName.HeaderText = "VendorName";
-            this.colVendorName.Name = "colVendorName";
-            this.colVendorName.ReadOnly = true;
-            this.colVendorName.Width = 105;
-            // 
-            // colProductID
-            // 
-            this.colProductID.HeaderText = "ProductID";
-            this.colProductID.Name = "colProductID";
-            this.colProductID.ReadOnly = true;
-            this.colProductID.Visible = false;
-            // 
-            // colProductName
-            // 
-            this.colProductName.HeaderText = "Product Name";
-            this.colProductName.Name = "colProductName";
-            this.colProductName.ReadOnly = true;
-            // 
-            // colProductPrice
-            // 
-            this.colProductPrice.HeaderText = "Price";
-            this.colProductPrice.Name = "colProductPrice";
-            this.colProductPrice.ReadOnly = true;
-            // 
-            // colProductQuantity
-            // 
-            this.colProductQuantity.HeaderText = "Quantity";
-            this.colProductQuantity.Name = "colProductQuantity";
-            this.colProductQuantity.ReadOnly = true;
-            this.colProductQuantity.Width = 60;
-            // 
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
@@ -420,11 +372,6 @@
             // erpGeneral
             // 
             this.erpGeneral.ContainerControl = this;
-            // 
-            // colTotal
-            // 
-            this.colTotal.HeaderText = "Total";
-            this.colTotal.Name = "colTotal";
             // 
             // label5
             // 
@@ -467,6 +414,59 @@
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             this.closeButton.MouseHover += new System.EventHandler(this.closeButton_MouseHover);
+            // 
+            // colSN
+            // 
+            this.colSN.HeaderText = "SN";
+            this.colSN.Name = "colSN";
+            this.colSN.ReadOnly = true;
+            this.colSN.Width = 30;
+            // 
+            // colVendorID
+            // 
+            this.colVendorID.HeaderText = "VendorID";
+            this.colVendorID.Name = "colVendorID";
+            this.colVendorID.ReadOnly = true;
+            this.colVendorID.Visible = false;
+            // 
+            // colVendorName
+            // 
+            this.colVendorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colVendorName.HeaderText = "VendorName";
+            this.colVendorName.Name = "colVendorName";
+            this.colVendorName.ReadOnly = true;
+            this.colVendorName.Width = 105;
+            // 
+            // colProductID
+            // 
+            this.colProductID.HeaderText = "ProductID";
+            this.colProductID.Name = "colProductID";
+            this.colProductID.ReadOnly = true;
+            this.colProductID.Visible = false;
+            // 
+            // colProductName
+            // 
+            this.colProductName.HeaderText = "Product Name";
+            this.colProductName.Name = "colProductName";
+            this.colProductName.ReadOnly = true;
+            // 
+            // colPurchasePrice
+            // 
+            this.colPurchasePrice.HeaderText = "Price";
+            this.colPurchasePrice.Name = "colPurchasePrice";
+            this.colPurchasePrice.ReadOnly = true;
+            // 
+            // colPurchaseQuantity
+            // 
+            this.colPurchaseQuantity.HeaderText = "Quantity";
+            this.colPurchaseQuantity.Name = "colPurchaseQuantity";
+            this.colPurchaseQuantity.ReadOnly = true;
+            this.colPurchaseQuantity.Width = 60;
+            // 
+            // colTotal
+            // 
+            this.colTotal.HeaderText = "Total";
+            this.colTotal.Name = "colTotal";
             // 
             // frmPurchase
             // 
@@ -517,16 +517,16 @@
         private System.Windows.Forms.GroupBox grpCRUD;
         private System.Windows.Forms.ErrorProvider erpGeneral;
         private IncLibrary.IncButton btnSave;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtGrandTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSN;
         private System.Windows.Forms.DataGridViewTextBoxColumn colVendorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colVendorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProductPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProductQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPurchasePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPurchaseQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtGrandTotal;
     }
 }
 

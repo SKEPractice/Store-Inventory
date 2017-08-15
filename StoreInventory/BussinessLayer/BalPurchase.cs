@@ -19,31 +19,37 @@ namespace BussinessLayer
                             inner join product on purchase.productID = product.productID";
             return DAO.GetTable(query,null, CommandType.Text);
         }
-        public bool AddPurchase(long productID,Int32 vendorID,long productPrice,Int32 quantity)
+        public bool AddPurchase(long vendorID,decimal totalAmount)
         {
+            DateTime purchaseDate=DateTime.Today;
             SqlParameter[] pram = new SqlParameter[]
             {
-                new SqlParameter("@productID",productID),
                 new SqlParameter("@vendorID",vendorID),
-                new SqlParameter("@productPrice",productPrice),
-                new SqlParameter("@quantity",quantity)
+                new SqlParameter("@totalAmount",totalAmount),
+                new SqlParameter("@purchaseDate",purchaseDate),
             };
-            if (DAO.IUD("insert into Purchase values(@productID,@vendorID,@productPrice,@quantity)", pram, CommandType.Text) > 0)
+            if (DAO.IUD("insert into Purchase values(@vendorID,@purchaseDate,@totalAmount)", pram, CommandType.Text) > 0)
             {
                 return true;
             }
             return false;
         }
-        public bool AddPurchaseItem(long productID, Int32 vendorID, long productPrice, Int32 quantity)
+        public int LastPurchaseID()
+        {
+            DataTable dt = new DataTable();
+            dt = DAO.GetTable("select top(1) purchaseID from Purchase order by purchaseID desc ", null, CommandType.Text);
+            return Convert.ToInt32(dt.Rows[0]["PurchaseID"].ToString());
+        }
+        public bool AddPurchaseItem(int purchaseQuantity,decimal purchasePrice,long purchaseID,long productID)
         {
             SqlParameter[] pram = new SqlParameter[]
             {
-                new SqlParameter("@productID",productID),
-                new SqlParameter("@vendorID",vendorID),
-                new SqlParameter("@productPrice",productPrice),
-                new SqlParameter("@quantity",quantity)
+                new SqlParameter("@purchaseQuantity",purchaseQuantity),
+                new SqlParameter("@purchasePrice",purchasePrice),
+                new SqlParameter("@purchaseID",purchaseID),
+                new SqlParameter("@productID",productID)
             };
-            if (DAO.IUD("insert into Purchase values(@productID,@vendorID,@productPrice,@quantity)", pram, CommandType.Text) > 0)
+            if (DAO.IUD("insert into PurchaseDetails values(@purchaseQuantity,@purchasePrice,@purchaseID,@productID)", pram, CommandType.Text) > 0)
             {
                 return true;
             }

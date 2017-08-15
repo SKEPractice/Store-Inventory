@@ -37,10 +37,36 @@ namespace StoreInventory
             this.Close();
         }
 
-
+        BALStock balStock = new BALStock();
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //balPurchase.AddPurchase
+            string vendorID = cboVendor.SelectedValue.ToString();
+            balPurchase.AddPurchase(Convert.ToInt32(vendorID), Convert.ToInt32(txtGrandTotal.Text));
+            int lastPurchaseID = balPurchase.LastPurchaseID();
+            for (int i = 0; i < dgvVendor.Rows.Count; i++)
+            {
+                //Checking stock
+                int availableQuantity;
+                DataTable dtStock = new DataTable();
+                long productID = Convert.ToInt64(dgvVendor.Rows[i].Cells["colProductID"].Value.ToString());
+                int purchaseQuantiy = Convert.ToInt32(dgvVendor.Rows[i].Cells["colPurchaseQuantity"].Value.ToString());
+                decimal purchasePrice = Convert.ToDecimal(dgvVendor.Rows[i].Cells["colPurchasePrice"].Value.ToString());
+                if (!balStock.CheckStock(productID))
+                {
+                    balStock.AddStock(productID, purchaseQuantiy);
+                }
+                else
+                {
+                    dtStock = balStock.GetStock(productID);
+                    availableQuantity = Convert.ToInt32(dtStock.Rows[0]["AvailableQuantity"].ToString());
+                    balStock.UpdateStock(productID, purchaseQuantiy+availableQuantity);
+                }
+                balPurchase.AddPurchaseItem(purchaseQuantiy, purchasePrice, lastPurchaseID, productID);
+            }
+            ClearControls();
+            dgvVendor.DataSource = null;
+            dgvVendor.Rows.Clear();
+            //retriving number of quantity available
         }
 
         private void btnAdd_click(object sender, EventArgs e)
@@ -54,12 +80,14 @@ namespace StoreInventory
                 dgvVendor.Rows[i].Cells["colVendorName"].Value = cboVendor.Text;
                 dgvVendor.Rows[i].Cells["colProductID"].Value = cboProduct.SelectedValue;
                 dgvVendor.Rows[i].Cells["colProductName"].Value = cboProduct.Text;
-                dgvVendor.Rows[i].Cells["colProductPrice"].Value = txtPrice.Text;
-                dgvVendor.Rows[i].Cells["colProductQuantity"].Value = txtQuantity.Text;
+                dgvVendor.Rows[i].Cells["colPurchasePrice"].Value = txtPrice.Text;
+                dgvVendor.Rows[i].Cells["colPurchaseQuantity"].Value = txtQuantity.Text;
                 dgvVendor.Rows[i].Cells["colTotal"].Value = Convert.ToInt32(txtPrice.Text) * Convert.ToInt32(txtQuantity.Text);
-                string grandTotal = dgvVendor.Rows[i].Cells["colTotal"].Value.ToString();
-                ClearControls();
-                txtGrandTotal.Text = grandTotal;
+                txtGrandTotal.Text = dgvVendor.Rows[i].Cells["colTotal"].Value.ToString();
+                txtPrice.Text = string.Empty;
+                cboProduct.SelectedIndex = 0;
+                cboProduct.Focus();
+                txtQuantity.Text = string.Empty;
             }
         }
 
@@ -167,6 +195,10 @@ namespace StoreInventory
 
         private void frmPurchase_Load(object sender, EventArgs e)
         {
+            cboVendor.ValueMember = "VendorID";
+            cboVendor.DisplayMember = "VendorName";
+            cboProduct.DisplayMember = "ProductName";
+            cboProduct.ValueMember = "ProductID";
             DataTable dtProduct = new DataTable();
             DataTable dtVendor = new DataTable();
             dtProduct = balProduct.GetAllProduct(string.Empty);
@@ -174,15 +206,12 @@ namespace StoreInventory
             drProduct["ProductName"] = "-- Please Select --";
             dtProduct.Rows.InsertAt(drProduct, 0);
             cboProduct.DataSource = dtProduct;
-            cboProduct.DisplayMember = "ProductName";
-            cboProduct.ValueMember = "ProductID";
             dtVendor = balVendor.GetAllVendor(string.Empty);
             DataRow drVendor = dtVendor.NewRow();
             drVendor["VendorName"] = "-- Please Select --";
             dtVendor.Rows.InsertAt(drVendor, 0);
+            
             cboVendor.DataSource = dtVendor;
-            cboVendor.DisplayMember = "VendorName";
-            cboVendor.ValueMember = "VendorID";
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
