@@ -237,6 +237,10 @@ namespace StoreInventory
 
         private void dgvVendor_MouseClick(object sender, MouseEventArgs e)
         {
+            if (dgvVendor.Rows.Count>=0)
+            {
+                return;
+            }
             cboProduct.SelectedValue = dgvVendor.CurrentRow.Cells["colProductID"].Value;
             cboVendor.SelectedValue = dgvVendor.CurrentRow.Cells["colVendorID"].Value;
             txtPrice.Text = dgvVendor.CurrentRow.Cells["colProductPrice"].Value.ToString();

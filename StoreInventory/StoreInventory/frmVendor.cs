@@ -158,6 +158,10 @@ namespace StoreInventory
 
         private void dgvVendor_MouseClick(object sender, MouseEventArgs e)
         {
+            if (dgvVendor.Rows.Count<=0)
+            {
+                return;
+            }
             txtVendorID.Text = dgvVendor.CurrentRow.Cells["colVendorID"].Value.ToString();
             txtVendorName.Text = dgvVendor.CurrentRow.Cells["colVendorName"].Value.ToString();
             txtVendorAddress.Text = dgvVendor.CurrentRow.Cells["colVendorAddress"].Value.ToString();

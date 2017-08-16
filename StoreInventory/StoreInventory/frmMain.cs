@@ -20,28 +20,28 @@ namespace StoreInventory
         private void addCategoryToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmCategory categoryForm = new frmCategory();
-            categoryForm.Show();
+            categoryForm.ShowDialog();
             categoryForm.MdiParent = this;
         }
 
         private void addBrandToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBrand brandForm = new frmBrand();
-            brandForm.Show();
+            brandForm.ShowDialog();
             brandForm.MdiParent = this;
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmProduct productForm = new frmProduct();
-            productForm.Show();
+            productForm.ShowDialog();
             productForm.MdiParent = this;
         }
 
         private void vendorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVendor vendorForm = new frmVendor();
-            vendorForm.Show();
+            vendorForm.ShowDialog();
            // vendorForm.WindowState = vendorForm.MaximumSize();
             vendorForm.MdiParent = this;
         }
@@ -49,7 +49,7 @@ namespace StoreInventory
         private void purchaseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmPurchase purchaseForm = new frmPurchase();
-            purchaseForm.Show();
+            purchaseForm.ShowDialog();
             purchaseForm.MdiParent = this;
         }
     }

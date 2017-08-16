@@ -38,6 +38,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.grpPurchase = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGrandTotal = new System.Windows.Forms.TextBox();
             this.btnSave = new IncLibrary.IncButton();
             this.grpCRUD = new System.Windows.Forms.GroupBox();
             this.btnUpdate = new IncLibrary.IncButton();
@@ -50,11 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVendor = new System.Windows.Forms.DataGridView();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.erpGeneral = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtGrandTotal = new System.Windows.Forms.TextBox();
-            this.closeButton = new StoreInventory.ButtonZ();
             this.colSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVendorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVendorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +60,9 @@
             this.colPurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPurchaseQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.erpGeneral = new System.Windows.Forms.ErrorProvider(this.components);
+            this.closeButton = new StoreInventory.ButtonZ();
             GetPurchaseDetail = new IncLibrary.IncButton();
             btnClear = new IncLibrary.IncButton();
             this.panel1.SuspendLayout();
@@ -115,7 +115,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(949, 33);
+            this.panel1.Size = new System.Drawing.Size(976, 33);
             this.panel1.TabIndex = 8;
             // 
             // txtID
@@ -127,6 +127,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(41, 23);
             this.txtID.TabIndex = 13;
+            this.txtID.Visible = false;
             // 
             // txtQuantity
             // 
@@ -164,6 +165,26 @@
             this.grpPurchase.TabIndex = 12;
             this.grpPurchase.TabStop = false;
             this.grpPurchase.Text = "Purchase";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(660, 368);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Grand Total";
+            // 
+            // txtGrandTotal
+            // 
+            this.txtGrandTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.txtGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrandTotal.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtGrandTotal.Location = new System.Drawing.Point(759, 364);
+            this.txtGrandTotal.Name = "txtGrandTotal";
+            this.txtGrandTotal.Size = new System.Drawing.Size(133, 29);
+            this.txtGrandTotal.TabIndex = 18;
             // 
             // btnSave
             // 
@@ -358,63 +379,6 @@
             this.dgvVendor.TabIndex = 12;
             this.dgvVendor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvVendor_MouseClick);
             // 
-            // txtPrice
-            // 
-            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPrice.Location = new System.Drawing.Point(141, 186);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(104, 23);
-            this.txtPrice.TabIndex = 9;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
-            // 
-            // erpGeneral
-            // 
-            this.erpGeneral.ContainerControl = this;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(660, 368);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Grand Total";
-            // 
-            // txtGrandTotal
-            // 
-            this.txtGrandTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.txtGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrandTotal.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtGrandTotal.Location = new System.Drawing.Point(759, 364);
-            this.txtGrandTotal.Name = "txtGrandTotal";
-            this.txtGrandTotal.Size = new System.Drawing.Size(133, 29);
-            this.txtGrandTotal.TabIndex = 18;
-            // 
-            // closeButton
-            // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.closeButton.DisplayText = "X";
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(916, 2);
-            this.closeButton.MouseClickColor1 = System.Drawing.Color.Red;
-            this.closeButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(31, 24);
-            this.closeButton.TabIndex = 9;
-            this.closeButton.Text = "X";
-            this.closeButton.TextLocation_X = 6;
-            this.closeButton.TextLocation_Y = 1;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
-            this.closeButton.MouseHover += new System.EventHandler(this.closeButton_MouseHover);
-            // 
             // colSN
             // 
             this.colSN.HeaderText = "SN";
@@ -468,6 +432,43 @@
             this.colTotal.HeaderText = "Total";
             this.colTotal.Name = "colTotal";
             // 
+            // txtPrice
+            // 
+            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtPrice.Location = new System.Drawing.Point(141, 186);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(104, 23);
+            this.txtPrice.TabIndex = 9;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            // 
+            // erpGeneral
+            // 
+            this.erpGeneral.ContainerControl = this;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.BZBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.closeButton.DisplayText = "X";
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(943, 2);
+            this.closeButton.MouseClickColor1 = System.Drawing.Color.Red;
+            this.closeButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(31, 24);
+            this.closeButton.TabIndex = 9;
+            this.closeButton.Text = "X";
+            this.closeButton.TextLocation_X = 6;
+            this.closeButton.TextLocation_Y = 1;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
+            this.closeButton.MouseHover += new System.EventHandler(this.closeButton_MouseHover);
+            // 
             // frmPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,7 +476,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(949, 572);
+            this.ClientSize = new System.Drawing.Size(976, 572);
             this.ControlBox = false;
             this.Controls.Add(this.grpPurchase);
             this.Controls.Add(this.panel1);
@@ -483,7 +484,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPurchase";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmPurchase_Load);
             this.panel1.ResumeLayout(false);
