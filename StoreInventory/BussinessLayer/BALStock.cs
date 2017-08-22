@@ -29,7 +29,7 @@ namespace BussinessLayer
             {
                 new SqlParameter("@productID",productID),
             };
-            return DAO.GetTable("select sum(StockQuantity) as AvailableQuantity from stock group by stockID where ProductID=@productID", pram, CommandType.Text);
+            return DAO.GetTable("select sum(StockQuantity) as AvailableQuantity from stock where ProductID=@productID group by stockID ", pram, CommandType.Text);
         }
         public bool UpdateStock(long productID, Int32 stockQuantity)
         {

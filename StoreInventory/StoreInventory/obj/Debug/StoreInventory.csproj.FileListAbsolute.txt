@@ -40,7 +40,6 @@ C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\D
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\MetroFramework.Design.dll
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\MetroFramework.dll
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\WindowsFormsApplication82.exe
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\DataAccessLayer.dll
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\ServerLicensing.dll
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\bin\Debug\FtpLibrary.dll
@@ -68,3 +67,4 @@ C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\D
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.csproj.GenerateResource.Cache
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.exe
 C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.pdb
+C:\Users\Yugesh\Source\Repos\Store-Inventory\StoreInventory\StoreInventory\obj\Debug\StoreInventory.frmSales.resources

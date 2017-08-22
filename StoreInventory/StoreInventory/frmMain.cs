@@ -49,8 +49,25 @@ namespace StoreInventory
         private void purchaseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmPurchase purchaseForm = new frmPurchase();
+            //purchaseForm.MdiParent = this;
             purchaseForm.ShowDialog();
-            purchaseForm.MdiParent = this;
+        }
+
+        private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void saleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSales salesForm = new frmSales();
+            salesForm.ShowDialog();
+            salesForm.MdiParent = this;
         }
     }
 }
